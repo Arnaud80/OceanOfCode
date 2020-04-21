@@ -1,4 +1,3 @@
-package src;
 //TODO : Manage the possibility to move before fire a torpedo or mine.
 //TODO : Manage the "I loose life" for TRIGGER and not only for TORPEDO
 //Imported in GitHub #15
