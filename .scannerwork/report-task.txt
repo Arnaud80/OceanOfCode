@@ -1,0 +1,7 @@
+organization=arnaud80
+projectKey=Arnaud80_OceanOfCode
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.7133
+dashboardUrl=https://sonarcloud.io/dashboard?id=Arnaud80_OceanOfCode
+ceTaskId=AXGnxqwn20iyqQ5rItQf
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXGnxqwn20iyqQ5rItQf
