@@ -1,10 +1,11 @@
+package oceanOfCode;
 //TODO : Manage the possibility to move before fire a torpedo or mine.
 //TODO : Manage the "I loose life" for TRIGGER and not only for TORPEDO
 //Imported in GitHub #16
 
 import java.util.*;
-import java.io.*;
-import java.math.*;
+//import java.io.*;
+//import java.math.*;
 
 /**
  * Auto-generated code below aims at helping you parse
@@ -23,10 +24,10 @@ class Zone {
 	}
 	
 	public Zone(int number) {
-		int x1=((number-1) % 3) * 5;
-		int y1=((number-1) / 3) * 5;
-		int x2=x1+4;
-		int y2=y1+4;
+		x1=((number-1) % 3) * 5;
+		y1=((number-1) / 3) * 5;
+		x2=x1+4;
+		y2=y1+4;
 		
 		this.updateRange(x1,y1,x2,y2);
 	}
