@@ -1,12 +1,8 @@
-env:
-  global:
-    secure: lJatYCHYTy134YFtbLzXJ97EZ+yUcU4Kr76/LN1MZscxgKDi5B1zIh+ooa+6FzaqcIgoMzg4tL5SE3GHastIYYNj8hd7o+tnEa/aEQA6XPfDFCbIT8kL/Ue7S5urQo7UcJtyal+BiCoGGYLM6NW2uib80GkR4glzbZmhR4UELqLO5d5jHKjm24eWaBurddGM/lQAHw2ZHM9rHFa36GFL/YSHFR3OUzw7MMwHaRK2pcfJIyWuidEQhWllJs7rAdpObTQkcLkx33dmibE9af6it4dvW7OwodxJKsUjsJAPfHUdM8soXoxlK/yGyuP3qq5JNpWRXXTeBUDLrOLPxPRb35Dr34EJwaw4LVMPrhh3a3+5w33djtYxoTu6U1e6PcvTMy6+HSUj9OwgMCAjTKBHinTtL75uRQDkLkTALfFkbwDZGEIVL/N5pC/fsswRbhYq268yGYkoA2gS4gN51CxtZJ24d1cbcu2UBLeLew0A9iRR2wYT5V6VEpzgbxk520hnS86w+2lE0gq433pcVTrJaV66bYzzz7R57IvlyHC4aIgkwW/BIaPQU+f+L9mLw2z1iV3AYbRp86oJsdjxpWd+oUILReaQN63mhf8Z2Dm/3t0L93Ri60+PMuyrkY2Tak3Mjm6EVtkMhnWsvsToRLLt1iUphj3tDf0OVGJWhRElK9w=
-
 addons:
   sonarcloud:
     organization: "arnaud80"
     token:
-      secure: "**************************" # encrypted value of your token
+      secure: "lJatYCHYTy134YFtbLzXJ97EZ+yUcU4Kr76/LN1MZscxgKDi5B1zIh+ooa+6FzaqcIgoMzg4tL5SE3GHastIYYNj8hd7o+tnEa/aEQA6XPfDFCbIT8kL/Ue7S5urQo7UcJtyal+BiCoGGYLM6NW2uib80GkR4glzbZmhR4UELqLO5d5jHKjm24eWaBurddGM/lQAHw2ZHM9rHFa36GFL/YSHFR3OUzw7MMwHaRK2pcfJIyWuidEQhWllJs7rAdpObTQkcLkx33dmibE9af6it4dvW7OwodxJKsUjsJAPfHUdM8soXoxlK/yGyuP3qq5JNpWRXXTeBUDLrOLPxPRb35Dr34EJwaw4LVMPrhh3a3+5w33djtYxoTu6U1e6PcvTMy6+HSUj9OwgMCAjTKBHinTtL75uRQDkLkTALfFkbwDZGEIVL/N5pC/fsswRbhYq268yGYkoA2gS4gN51CxtZJ24d1cbcu2UBLeLew0A9iRR2wYT5V6VEpzgbxk520hnS86w+2lE0gq433pcVTrJaV66bYzzz7R57IvlyHC4aIgkwW/BIaPQU+f+L9mLw2z1iV3AYbRp86oJsdjxpWd+oUILReaQN63mhf8Z2Dm/3t0L93Ri60+PMuyrkY2Tak3Mjm6EVtkMhnWsvsToRLLt1iUphj3tDf0OVGJWhRElK9w="
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
