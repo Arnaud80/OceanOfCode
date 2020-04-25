@@ -107,6 +107,11 @@ class Position {
         return same;
     }
     
+    @Override
+    public int hashCode() {
+    	return(x*y);
+    }
+    
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
