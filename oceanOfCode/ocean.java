@@ -505,6 +505,7 @@ class Submarine {
     private char myDirection = 'N';
     private int sonarZone=0;
     private Position lastTarget=null;
+    private Random random=new Random();
     
     public Submarine(int x, int y, int myLife, int oppLife, int torpedo, int sonar, int silence, int mine) {
         update(x,y,myLife,oppLife,torpedo,sonar,silence,mine);
@@ -596,7 +597,6 @@ class Submarine {
     
     public void setRandomDirection() {
         char tabDirection[]={'N','E','S','W'};
-        Random random = new Random();
         
         myDirection=tabDirection[random.nextInt(4)];
     }
@@ -875,7 +875,6 @@ class Submarine {
         int cellE=map.east(myPosition,"Initial");
         int cellW=map.west(myPosition,"Initial");
         ArrayList<Character> directions = new ArrayList<Character>();
-        Random random = new Random();
         String direction="";
         
         if((char)cellN!='x' && map.north(myPosition,"Mines")==0) directions.add('N');
@@ -935,7 +934,6 @@ class Submarine {
         ArrayList <Position> tmpTargets=new ArrayList<Position>();
         ArrayList <Position> forbidenTarget=new ArrayList<Position>();
        
-        Random random=new Random();
         Position ciblePosition=new Position();
         
         for(int x=-1;x<2;x++) {
@@ -1061,7 +1059,6 @@ class Submarine {
         ArrayList <Position> tmpTargets=new ArrayList<Position>();
         ArrayList <Position> forbidenTarget=new ArrayList<Position>();
        
-        Random random=new Random();
         Position ciblePosition=new Position();
         
         Position futurPosition=new Position(myPosition);
@@ -1228,6 +1225,7 @@ class Map {
     private int initialComputedMap[][];
     private int minesMap[][];
     private int oppMap[][];
+    private Random random=new Random();
     
     public Map(int width, int height) {
         this.width=width;
@@ -1342,6 +1340,8 @@ class Map {
     	int minY=height;
     	int maxX=0;
     	int maxY=0;
+    	
+    	
     	
     	switch(layer) {
     		case "Opponent":
@@ -1546,7 +1546,6 @@ class Map {
     }
     
     public Position getInitialPos() {
-        Random random = new Random();
         Position position=new Position();
         
         //position=new Position(random.nextInt(width),random.nextInt(height));
@@ -1810,7 +1809,6 @@ class Map {
     
     public Position getMine(SearchPosition searchPosition, Position position) {
         ArrayList<Position> mines=new ArrayList<Position>();
-        Random random = new Random();
         Position positionMine=null;
         
         for(int y=searchPosition.getY1();y<(searchPosition.getY2()+1);y++) {
