@@ -1960,15 +1960,6 @@ class Player {
             int mineCooldown = in.nextInt();
             String sonarResult = in.next();
             
-            System.err.println("sonarResult="+sonarResult);
-            if(sonarResult.equals("Y")) {
-                System.err.println("Sonar found opponent in zone "+mySubmarine.getSonarZone());
-                searchPosition.zone(mySubmarine.getSonarZone(), map, sonarResult);
-            } else {
-            	if(sonarResult.equals("N")) searchPosition.zone(mySubmarine.getSonarZone(), map, sonarResult);
-            	//else System.err.println("No sonar result");
-            }
-            
             if (in.hasNextLine()) {
                 in.nextLine();
             }
@@ -1991,6 +1982,15 @@ class Player {
 
             if(mySubmarine==null) mySubmarine = new Submarine(x,y,myLife,oppLife,torpedoCooldown,sonarCooldown,silenceCooldown,mineCooldown);
             else {
+            	System.err.println("sonarResult="+sonarResult);
+                if(sonarResult.equals("Y")) {
+                    System.err.println("Sonar found opponent in zone "+mySubmarine.getSonarZone());
+                    searchPosition.zone(mySubmarine.getSonarZone(), map, sonarResult);
+                } else {
+                	if(sonarResult.equals("N")) searchPosition.zone(mySubmarine.getSonarZone(), map, sonarResult);
+                	//else System.err.println("No sonar result");
+                }
+                
             	myLooseLife=mySubmarine.getMyLife();
             	oppLooseLife=mySubmarine.getOppLife();
             	mySubmarine.update(x,y,myLife,oppLife,torpedoCooldown,sonarCooldown,silenceCooldown,mineCooldown);
