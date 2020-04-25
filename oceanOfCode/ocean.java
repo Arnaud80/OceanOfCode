@@ -2116,7 +2116,7 @@ class Player {
             String dirMine="";
             if(mySubmarine.getMineCooldown()==0) {
             	dirMine=mySubmarine.getMineDirection(mySubmarine.getPosition(),map);
-            	if(dirMine!="") strMine="MINE " + dirMine;
+            	if(!dirMine.equals("")) strMine="MINE " + dirMine;
             }
             
             String strReload="";
@@ -2169,13 +2169,13 @@ class Player {
                 	}
                 }
                 // If SILENCE is not needed we try SONAR without MOVE !
-                else if(mySubmarine.getSonarCooldown()==0 && strSonar!="" && accuracy<sonarAccuracy) {
+                else if(mySubmarine.getSonarCooldown()==0 && !strSonar.equals("") && accuracy<sonarAccuracy) {
                 	// SONAR
                 	System.err.println("MSG "+strMessage+"|"+strSonar);
                 	System.out.println("MSG "+strMessage+"|"+strSonar);
                 }
                 // If SONAR is not needed and we have a TORPEDO cible with accuracy > torpedoAccuracy with send a torpedo.
-            	else if(mySubmarine.getTorpedoCooldown()==0 && strCibleTorpedo!="" && accuracy>torpedoAccuracy) {
+            	else if(mySubmarine.getTorpedoCooldown()==0 && !strCibleTorpedo.equals("") && accuracy>torpedoAccuracy) {
               		// TORPEDO and MOVE
             		silenceNeeded=true;
             		mySubmarine.setLastTarget(torpedoTarget);
@@ -2191,7 +2191,7 @@ class Player {
             		}
             	}
                 // If TORPEDO is not possible and we have mine to place, we MINE 
-                else if(mySubmarine.getMineCooldown()==0 && strMine!="") {
+                else if(mySubmarine.getMineCooldown()==0 && !strMine.equals("")) {
                 	// MINE
 	                mySubmarine.sendMine(mySubmarine.getPosition(),map,dirMine);
 	                System.err.println("MSG "+strMessage+"|"+strMine);
@@ -2199,7 +2199,7 @@ class Player {
                 }
                 else { 
                     // If TRIGGER is available with accuracy>triggerAccuracy we TRIGGER
-                	if(strTrigger!="" && accuracy>triggerAccuracy) {
+                	if(!strTrigger.equals("") && accuracy>triggerAccuracy) {
                 		mySubmarine.goTo(direction, map);
                 		mySubmarine.setLastTarget(triggerTarget);
                 		map.setCellValue(triggerTarget.getX(), triggerTarget.getY(), "Mines", 0);
