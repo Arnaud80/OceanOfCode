@@ -16,7 +16,7 @@
 		<sonar.projectKey>Arnaud80_OceanOfCode</sonar.projectKey>
 		<sonar.sources>.</sonar.sources>
 	</properties>
-
+	
 	<!-- Déclaration de la dépendance vers JUnit -->
 	<dependencies>
 		<dependency>
@@ -29,6 +29,7 @@
 
 	<!-- Pour être compatible avec JUnit 5 -->
 	<build>
+		<!--  <sourceDirectory>${src.dir}</sourceDirectory>    -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
