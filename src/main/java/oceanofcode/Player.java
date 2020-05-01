@@ -22,10 +22,17 @@ public class Player {
 		}
 		
 		public Zone(int number) {
-			x1=((number-1) % 3) * 5;
-			y1=((number-1) / 3) * 5;
-			x2=x1+4;
-			y2=y1+4;
+			if(number>0 && number<10) {
+				x1=((number-1) % 3) * 5;
+				y1=((number-1) / 3) * 5;
+				x2=x1+4;
+				y2=y1+4;
+			} else {
+				x1=0;
+				y1=0;
+				x2=0;
+				y2=0;
+			}
 			
 			this.updateRange(x1,y1,x2,y2);
 		}
@@ -98,7 +105,7 @@ public class Player {
 
 	        //System.err.println(this.x+" == "+((Position)object).x+" && "+this.y+" == "+((Position)object).y);
 	        
-	        if (object != null && object instanceof Position)
+	        if (object instanceof Position)
 	        	if(this.x == ((Position)object).x && this.y == ((Position)object).y) same=true;
 
 	        //System.err.println(same);
